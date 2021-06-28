@@ -1,0 +1,36 @@
+
+
+<h1 style="color:white">Hackers</h1>
+
+<table class="table table-dark table-striped table-hover">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Twitter</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hackers.each do |hacker| %>
+      <% if hacker.user == current_user%>
+      <tr>
+        <td class="profile_link"><%= link_to hacker.first_name+' '+hacker.last_name, hacker %></td>
+        <td><%= hacker.email %></td>
+        <td><%= hacker.phone %></td>
+        <td><%= hacker.twitter %></td>
+        <td class="link"><%= link_to 'Show', hacker %></td>
+        <td class="link"><%= link_to 'Edit', edit_hacker_path(hacker)%></td>
+        <td class="linkd"><%= link_to 'Destroy', hacker, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+      <%end%>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hacker', new_hacker_path, class:"btn btn-dark"%>
+

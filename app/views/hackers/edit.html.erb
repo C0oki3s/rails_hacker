@@ -1,0 +1,7 @@
+<h1 style="color:white">Editing Hacker</h1>
+
+<%= render 'form', hacker: @hacker %>
+<br>
+<%= link_to 'Show', @hacker,class:"btn btn-dark" %> ||
+<%= link_to 'Back', hackers_path,class:"btn btn-dark" %> ||
+<%= link_to 'Destroy', @hacker, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger"%>

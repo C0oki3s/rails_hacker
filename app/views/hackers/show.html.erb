@@ -1,0 +1,17 @@
+
+
+
+<div class="jumbotron">
+  <h1 class="display-4"><%= @hacker.first_name %>  <%= @hacker.last_name %></h1>
+  <strong class="show_data">Email:</strong>
+  <p class="lead"><%= @hacker.email %></p>
+   <strong class="show_data">Phone:</strong>
+  <p class="lead"><%= @hacker.phone %></p>
+  <strong class="show_data">Twitter:</strong>
+  <a href="<%= @hacker.twitter%>"><p class="lead"><%= @hacker.twitter%></p></a>
+  <hr class="my-4">
+  <%= link_to 'Edit', edit_hacker_path(@hacker),class:"btn btn-dark" %>
+<%= link_to 'Back', hackers_path,class:"btn btn-dark" %>
+</div>
+
+
